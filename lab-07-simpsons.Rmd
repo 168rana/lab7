@@ -1,6 +1,6 @@
 ---
 title: "lab-07-simpsons.Rmd"
-author: "Musab Isah "
+author: rana alshammari/2201000999 
 date: "17 March 2021"
 output: pdf_document
 ---
@@ -22,43 +22,50 @@ library(mosaicData)
 
 1.  
 ```{r whickam}
-
+ ?Whickham
 ```
     
 Your answer:
-
+he description states that is based on age, smoking, and mortality, which are all observable events and not produced via experiments.
 2.  
 ```{r observations}
-
+nrow(Whickham)
 ```
 
-Your answer;
+Your answer; the are 1314 observations. as we knaw evrey row observation
 
 3.  
 
 ```{r number_variables}
-
+names(Whickham)
 ```
 
 Your answer:  
-
+obs:1314.Represent outcome , smoker and age
 ```{r var_type}
-
+unique(Whickham$outcome)
+unique(Whickham$smoker)
+unique(Whickham$ega)
 ```
 
 Your answer: 
-
+Using the unique() function on the 3 variables we could see that "outcome" only Dead value, which makes it categorical non-ordinal. "smoker" only takes Yes or No, makes it categorical non-ordinal. Age is numerical continous data  
 ```{r plot_outcome}
 
+ggplot(Whickham, aes(x = outcome)) +
+geom_bar()
 ```
 
 
 ```{r plot_smoker}
 
+ggplot(Whickham, aes(x = smoker)) +
+geom_bar()
 ```
 
 ```{r plot_age}
-
+ggplot(Whickham, aes(x = age)) +
+geom_bar()
 ```
 
 
