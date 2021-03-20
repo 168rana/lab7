@@ -64,17 +64,16 @@ geom_bar()
 ```
 
 ```{r plot_age}
-ggplot(Whickham, aes(x = age)) +
-geom_bar()
+ggplot (Whickham, aes(x = age)) +geom_boxplot() 
 ```
 
 
 4. 
 
 ```{r plot_smokeVSincome_1}
-
+ggplot(data=Whickham, aes(x=smoker, y=outcome, color=outcome)) + geom_bar(stat="identity")
 ```
-
+Smokers if they continue to smoke harm them and they die
 Knit, commit, and push to github.
 
 5. 
